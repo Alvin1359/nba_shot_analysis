@@ -1,4 +1,40 @@
-/* .container {
-    height: 720px;
+p, a{
+    font-size: 22px
+}
+
+strong {
+    font-size: 20px
+}
+
+h3 {
+    font-size: 40px
+}
+
+h5 {
+    font-size: 32px;
+}
+
+.content {
+    max-width: 1700px;
     margin: auto;
-} */
+    margin-top: 50px;
+  }
+
+.tippy-box[data-theme~='blue'] {
+    background-color: #18a0b1;
+    color: white;
+    font-size: medium;
+    }
+
+.tippy-content {
+    font-size: large;
+    padding: 0.3rem 0.6rem;
+    }
+
+#myButton {
+    background-color: #18a0b1;
+    color: white;
+    font-size: xx-large;
+    border-radius: 5px;
+    border: white;
+}

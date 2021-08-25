@@ -28,10 +28,10 @@ d3.select("#btn-predict").on("click", ()=>{
         console.log(response.prediction);
 
         if(response.prediction == "0"){
-            prediction_output.text("You missed!"); 
+            prediction_output.text("Bad luck, you missed!"); 
 
         } else { 
-            prediction_output.text("You made the shot!");
+            prediction_output.text("Nice one! You made the shot!");
         }
     });
 })

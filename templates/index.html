@@ -6,14 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>NBA Shot Analysis</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
         <link rel="stylesheet" href="../static/css/style.css">
     </head>
 
     <body>
       <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #18a0b1;">
           <a class="navbar-brand" href="/">
-            <img src="../static/image/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
+            <img src="../static/images/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
             <strong>NBA Shot Analysis</strong> 
           </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,26 +24,73 @@
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item dropdown">
                         <li class="nav-item">
-                          <a class="nav-link" href="index.html"><strong>Home</strong></a>
+                          <a class="nav-link" href="/"><strong>Home</strong></a>
                       <li class="nav-item">
-                       <a class="nav-link" href="/player_comparison.html"><strong>Player Shot Comparison</strong></a>
+                       <a class="nav-link" href="/comparisons"><strong>Player/League Comparisons</strong></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/league_comparison.html"><strong>League Shot Comparison</strong></a>
+                        <a class="nav-link" href="/player_shots"><strong>Player Shot Charts 2018-19</strong></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/player_shots.html"><strong>Player Shot Charts 2018-19</strong></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/machine_learning.html"><strong>Take The Shot</strong></a>
+                        <a class="nav-link" href="/take_the_shot"><strong>Take The Shot</strong></a>
                       </li>
                   </ul>
                </div>
         </nav>
       </header>
 
-     
+      <div class="content">
+        <h3>
+          About Basketall
+        </h3>
+        <p>
+          Loorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh risus, rutrum ac vulputate sit amet, elementum ac mauris. Vivamus quis finibus arcu. Integer mattis nulla id vestibulum semper. Donec dapibus eu erat vitae malesuada. Pellentesque non accumsan nunc, finibus interdum orci. Proin suscipit, augue id ullamcorper fermentum, urna sem bibendum purus, vel convallis nisl massa ac sapien. Nullam in nunc vitae nulla dictum mattis eu sed ex. In eu augue aliquet, rhoncus augue sed, vehicula lectus. Vestibulum in orci vitae elit pretium semper. Etiam id vestibulum sapien, id porta augue. Integer iaculis risus non neque mattis varius. In enim lectus, eleifend eget felis eget, posuere tincidunt tortor. Integer ac justo eget magna tincidunt congue. Aenean quis fringilla nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur mollis turpis, vel gravida turpis gravida id.
+        </p>
+      </div>
+
+      <div class="content">
+
+        <div class="card-deck">
+        <div class="card border-info mb-3">
+          <a href="/comparisons"><img src="../static/images/season_comparison.png" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title text-info">Player/League Comparisons</h5>
+            <p class="card-text">An analysis on how the 2008-09 season compares with the 2018-19 season when it comes to shot selection.</p>
+            <a href="/comparisons" class="btn btn-info">Check it out</a>
+          </div>
+        </div>
+        <div class="card border-info mb-3">
+          <a href="/player_shots"><img src="../static/images/player_shots.png" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title text-info">Player Shot Charts 2018-19 Season</h5>
+            <p class="card-text">A tool you can use that visualises all the shots taken by players during the 2018-19 season.</p>
+            <a href="/player_shots" class="btn btn-info">Check it out</a>
+          </div>
+        </div>
+        <div class="card border-info mb-3">
+          <a href="/take_the_shot"><img src="../static/images/court_distance.png" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title text-info">Take The Shot!</h5>
+            <p class="card-text">You are given the ball to shoot, test your skills and take the shot! This prediction is made using
+              a machine learning model built using 
+              <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a>
+              logistic regression model.
+            </p>
+            <a href="/take_the_shot" class="btn btn-info">Check it out</a>
+          </div>
+        </div>
+      </div>
       
+    </div>
+
+    <div class="content">
+      <h3>
+        About Basketall
+      </h3>
+      <p>
+        Loorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh risus, rutrum ac vulputate sit amet, elementum ac mauris. Vivamus quis finibus arcu. Integer mattis nulla id vestibulum semper. Donec dapibus eu erat vitae malesuada. Pellentesque non accumsan nunc, finibus interdum orci. Proin suscipit, augue id ullamcorper fermentum, urna sem bibendum purus, vel convallis nisl massa ac sapien. Nullam in nunc vitae nulla dictum mattis eu sed ex. In eu augue aliquet, rhoncus augue sed, vehicula lectus. Vestibulum in orci vitae elit pretium semper. Etiam id vestibulum sapien, id porta augue. Integer iaculis risus non neque mattis varius. In enim lectus, eleifend eget felis eget, posuere tincidunt tortor. Integer ac justo eget magna tincidunt congue. Aenean quis fringilla nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur mollis turpis, vel gravida turpis gravida id.
+      </p>
+    </div>
       
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

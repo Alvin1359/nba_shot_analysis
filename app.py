@@ -10,6 +10,14 @@ app = Flask(__name__)
 def homepage():
     return render_template("index.html")
 
+@app.route("/comparisons")
+def comparison_page():
+    return render_template("comparisons.html")
+
+@app.route("/player_shots")
+def playershot_page():
+    return render_template("player_shots.html")
+
 @app.route("/take_the_shot")
 def shot_page():
     return render_template("machine_learning.html")
