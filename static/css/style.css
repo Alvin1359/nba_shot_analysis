@@ -32,10 +32,16 @@ h5 {
     padding: 0.3rem 0.6rem;
     }
 
-#myButton {
+#myButton, #myButton2, #myButton3, #myButton4 {
     background-color: #18a0b1;
     color: white;
-    font-size: xx-large;
+    font-size: large;
     border-radius: 5px;
     border: white;
+}
+
+#myButton2, #myButton3, #myButton4 {
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-bottom: 5px;
 }

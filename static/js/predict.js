@@ -31,7 +31,7 @@ d3.select("#btn-predict").on("click", ()=>{
             prediction_output.text("Bad luck, you missed!"); 
 
         } else { 
-            prediction_output.text("Nice one! You made the shot!");
+            prediction_output.text("Nice Shot! You made it!");
         }
     });
 })
