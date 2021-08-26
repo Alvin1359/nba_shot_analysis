@@ -5,78 +5,148 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>NBA Shot Analysis</title>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
         <link rel="stylesheet" href="../static/css/style.css">
     </head>
 
     <body>
-      <body>
-        <header>
-          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #18a0b1;">
-            <a class="navbar-brand" href="/">
-              <img src="../static/images/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
-              <strong>NBA Shot Analysis</strong> 
-            </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                          <li class="nav-item">
-                            <a class="nav-link" href="/"><strong>Home</strong></a>
-                      <li class="nav-item">
-                       <a class="nav-link" href="/comparisons"><strong>Player/League Comparisons</strong></a>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #18a0b1;">
+          <a class="navbar-brand" href="/">
+            <img src="../static/images/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
+            <strong>NBA Shot Analysis</strong> 
+          </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/"><strong>Home</strong></a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/comparisons"><strong>Player/League Comparisons</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/player_shots"><strong>Player Shot Charts 2018-19</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/take_the_shot"><strong>Take The Shot</strong></a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/player_shots"><strong>Player Shot Charts 2018-19</strong></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/take_the_shot"><strong>Take The Shot</strong></a>
-                        </li>
-                    </ul>
-                 </div>
-          </nav>
-        </header>
+                  </ul>
+                </div>
+        </nav>
+      </header>
 
       <div class="content">
 
         <h3>
-          About Basketall
+          Comparing 2008-09 And 2018-19 Seasons: Players And League
         </h3>
+
+        <hr>
+
         <p>
-          Loorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh risus, rutrum ac vulputate sit amet, elementum ac mauris. Vivamus quis finibus arcu. Integer mattis nulla id vestibulum semper. Donec dapibus eu erat vitae malesuada. Pellentesque non accumsan nunc, finibus interdum orci. Proin suscipit, augue id ullamcorper fermentum, urna sem bibendum purus, vel convallis nisl massa ac sapien. Nullam in nunc vitae nulla dictum mattis eu sed ex. In eu augue aliquet, rhoncus augue sed, vehicula lectus. Vestibulum in orci vitae elit pretium semper. Etiam id vestibulum sapien, id porta augue. Integer iaculis risus non neque mattis varius. In enim lectus, eleifend eget felis eget, posuere tincidunt tortor. Integer ac justo eget magna tincidunt congue. Aenean quis fringilla nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur mollis turpis, vel gravida turpis gravida id.
+          In order to see how basketball has changed over the years, it is important to compare where players shot from during different 
+          seasons. Below are visualsations of where players shot from during the 2008-09 season compared to the 2018-19 season as well as
+          a summmary a comparison of shot selection league wide. Data used is sourced from the
+          <a href="https://github.com/swar/nba_api" target="_blank">NBA API</a>.
+        </p>
+
+        <p>
+          <small class="text-muted">
+            (Players available for comparison are only those who have played in both seasons).
+          </small>
         </p>
 
       </div>
-        
-      <div class='tableauPlaceholder' id='viz1629915708348' style='border: 3px solid #18a0b1; margin-left: 100px; margin-right: 100px; margin-top: 50px; margin-bottom: 50px;'><noscript><a href='#'><img alt='Season Shot Comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629915708348');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-      
+
       <div class="content">
 
         <h3>
-          About Basketall
+          Player Shot Comparison
         </h3>
+
+        <hr>
+
+      </div>
+
+      <button id="myButton2">Help!</button>  
+      <div class='tableauPlaceholder' id='viz1629915708348' style='border: 3px solid #18a0b1; margin-left: 100px; margin-right: 100px; margin-bottom: 50px;'><noscript><a href='#'><img alt='Season Shot Comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_player_shot_comparison_08_vs_18_season&#47;SeasonShotComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629915708348');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      
+      <div class="content">
+
         <p>
-          Loorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh risus, rutrum ac vulputate sit amet, elementum ac mauris. Vivamus quis finibus arcu. Integer mattis nulla id vestibulum semper. Donec dapibus eu erat vitae malesuada. Pellentesque non accumsan nunc, finibus interdum orci. Proin suscipit, augue id ullamcorper fermentum, urna sem bibendum purus, vel convallis nisl massa ac sapien. Nullam in nunc vitae nulla dictum mattis eu sed ex. In eu augue aliquet, rhoncus augue sed, vehicula lectus. Vestibulum in orci vitae elit pretium semper. Etiam id vestibulum sapien, id porta augue. Integer iaculis risus non neque mattis varius. In enim lectus, eleifend eget felis eget, posuere tincidunt tortor. Integer ac justo eget magna tincidunt congue. Aenean quis fringilla nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur mollis turpis, vel gravida turpis gravida id.
+          It is evident that players have transitioned towards shooting more three-point shots than two-point shots, with some players with 
+          a noteworthry transition being Brook Lopez, Al Horford, Kevin Love, Marc Gasol and Trevor Ariza. In the case of Brook Lopez,
+          during the 2008-09 season, he shot almost all of his shots from within the three-point line, with only two three-pointers attempted
+          throughout the entire season. Compare this to his 2018-19 season where over 500 attempts were made from behind the three-point line.
+        </p>
+        <br>
+        <p>
+          Many of the players who have transitioned to more three-point attempts than two-point attempts play the center position in a team.
+          Of the 5 players noted above, 4 play/have played as a center in their respective teams. With how the game has evolved, centers who
+          used to only play inside the three-point arc are now stretching the floor and shooting a higher volume of three-point shots.
         </p>
 
       </div>  
 
-      <div class='tableauPlaceholder' id='viz1629915632993' style='border: 3px solid #18a0b1; margin-left: 100px; margin-right: 100px; margin-top: 50px; margin-bottom: 50px;'><noscript><a href='#'><img alt='Shot Zone Comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629915632993');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-      
       <div class="content">
 
         <h3>
-          About Basketall
+          League Shot Comparison
         </h3>
+
+        <hr>
+
+      </div>
+
+      <button id="myButton3">Help!</button>
+      <div class='tableauPlaceholder' id='viz1629947431775' style='border: 3px solid #18a0b1; margin-left: 100px; margin-right: 100px; margin-bottom: 50px;'><noscript><a href='#'><img alt='Shot Zone Comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nb&#47;nba_shot_comparison_08_vs_18_season&#47;ShotZoneComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629947431775');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      
+      <div class="content">
+
         <p>
-          Loorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh risus, rutrum ac vulputate sit amet, elementum ac mauris. Vivamus quis finibus arcu. Integer mattis nulla id vestibulum semper. Donec dapibus eu erat vitae malesuada. Pellentesque non accumsan nunc, finibus interdum orci. Proin suscipit, augue id ullamcorper fermentum, urna sem bibendum purus, vel convallis nisl massa ac sapien. Nullam in nunc vitae nulla dictum mattis eu sed ex. In eu augue aliquet, rhoncus augue sed, vehicula lectus. Vestibulum in orci vitae elit pretium semper. Etiam id vestibulum sapien, id porta augue. Integer iaculis risus non neque mattis varius. In enim lectus, eleifend eget felis eget, posuere tincidunt tortor. Integer ac justo eget magna tincidunt congue. Aenean quis fringilla nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur mollis turpis, vel gravida turpis gravida id.
+          Comparing the entire league between the 2008-09 and 2018-19 season shows that the number of shots in each zone remains somewhat consistent
+          for the restricted area, in the paint and corner three-point shots, however there is a stark contrast between the number of shots 
+          attempted in the mid-range and above the break three between the seasons. The number of mid-range shot attempts has halved from
+          60 000+ attempts in 2008-09 to around 30 000 attempts in 2018-19. These shot attempts have transitioned to above the break three point
+          shots, with attempts doubling from 30 000 in 2008-09 to 60 000+ in the 2018-19 season.
+        </p>
+        <br>
+        <p>
+          Leaguewide, field goal percentage largely remains similar when comparing percentages from both seasons, with only slight differences
+          in the proportion of shots made in each shooting zone. Although shooting percentage drops from 2008-09 to 2018-19 when shooting
+          from above the break three, a 1% drop in percentage is neglible when it coincides with double the amount of shots from three-points in
+          2018-19.
+        </p>
+
+        <br>
+        <br>
+
+        <h3>
+          Summary
+        </h3>
+
+        <hr>
+
+        <p>
+          Teams are shooting more three-point shots due to a simple fact, the team with more points at the end of the game wins.
+          <ul>
+            <li>Two-point shots are worth 1 point per shot when shooting at 50%</li>
+            <li>Three-point shots are worth 1 point per shot when shooting at 33%</li>
+          </ul>
+          However, with a league average of approximately 37% from three-points, each three point shot is worth ~1.11 points. For a two-point
+          shot to be worth 1.11 points, players would have to shoot 55.5% from two-points in order to match the three-point efficiency. The graphs
+          show that this 55.5% is not reached in any two-point shot, leading to an increase in volume of three-point shots.
         </p>
 
       </div>
-  
+      
+      <script src="https://unpkg.com/@popperjs/core@2"></script>
+      <script src="https://unpkg.com/tippy.js@6"></script>
+      <script src="../static/js/tooltip.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     </body>

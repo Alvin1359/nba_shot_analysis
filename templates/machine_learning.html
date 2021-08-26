@@ -7,39 +7,37 @@
         <title>NBA Shot Analysis</title>
         <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
         <link rel="stylesheet" href="../static/css/style.css">
     </head>
 
     <body>
-      <body>
-        <header>
-          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #18a0b1;">
-            <a class="navbar-brand" href="/">
-              <img src="../static/images/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
-              <strong>NBA Shot Analysis</strong> 
-            </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                          <li class="nav-item">
-                            <a class="nav-link" href="/"><strong>Home</strong></a>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #18a0b1;">
+          <a class="navbar-brand" href="/">
+            <img src="../static/images/basketball.png" width="40" height="40" class="d-inline-block align-top" alt="basketball">
+            <strong>NBA Shot Analysis</strong> 
+          </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
                       <li class="nav-item">
-                       <a class="nav-link" href="/comparisons"><strong>Player/League Comparisons</strong></a>
+                        <a class="nav-link" href="/"><strong>Home</strong></a>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/comparisons"><strong>Player/League Comparisons</strong></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="/player_shots"><strong>Player Shot Charts 2018-19</strong></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="/take_the_shot"><strong>Take The Shot</strong></a>
-                        </li>
-                    </ul>
-                 </div>
-          </nav>
-        </header>
+                      </li>
+                  </ul>
+                </div>
+        </nav>
+      </header>
 
       <div class="content">
         <h1>Find out if you will make the shot!</h1> 
@@ -105,7 +103,7 @@
         
         <hr>
 
-        <h3>Shot Result</h3>   
+        <h3>Shot Result:</h3>   
         <h1 id="prediction-output"></h1>
 
       </div>
