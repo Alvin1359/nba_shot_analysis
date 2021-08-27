@@ -14,6 +14,14 @@ h5 {
     font-size: 30px;
 }
 
+input {
+    margin-bottom: 10px;
+}
+
+.btn-predict {
+    margin-top: 10px;
+}
+
 .content {
     max-width: 1700px;
     margin-left: 100px;
@@ -21,8 +29,8 @@ h5 {
     margin-top: 50px;
   }
 
- .content-last {
-     margin-bottom: 50px;
+.content-last {
+    margin-bottom: 50px;
  }
   
 .tippy-box[data-theme~='blue'] {
