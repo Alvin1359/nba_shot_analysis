@@ -1,4 +1,20 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function delayedResponseMissed() {
+    await sleep(2000);
+    d3.select("#prediction-output").text("Bad luck, you missed!"); 
+}
+
+async function delayedResponseMade() {
+    await sleep(2000);
+    d3.select("#prediction-output").text("Nice Shot! You made it!");
+}
+
 d3.select("#btn-predict").on("click", ()=>{
+
+    d3.select("#prediction-output").text("You take the shot...")
 
     var period = d3.select("#period").node().value; 
     var shot_clock = d3.select("#shot_clock").node().value; 
@@ -7,6 +23,7 @@ d3.select("#btn-predict").on("click", ()=>{
     var shot_dist = d3.select("#shot_dist").node().value; 
     var pts_type = d3.select("#pts_type").node().value; 
     var close_def_dist = d3.select("#close_def_dist").node().value; 
+    
 
     d3.json("/api/predict", {
 
@@ -23,15 +40,15 @@ d3.select("#btn-predict").on("click", ()=>{
         headers: {
             "Content-type": "application/json"
         }
+
     }).then(response => {
-        var prediction_output = d3.select("#prediction-output");
         console.log(response.prediction);
 
         if(response.prediction == "0"){
-            prediction_output.text("Bad luck, you missed!"); 
+            delayedResponseMissed();
 
-        } else { 
-            prediction_output.text("Nice Shot! You made it!");
+        } else {
+            delayedResponseMade();
         }
     });
 })
