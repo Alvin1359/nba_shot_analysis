@@ -179,3 +179,6 @@ Sends prediction result back to user
 - An interactive chart showing the locations of shots taken by a player during the 2018-19 season
 - Size and colour of markings are scaled by the FG% of the player at that location
 - Chart is filterable by shot zone and player name
+
+Final Version Commit: 17 September 2021
+Last Revision: 03 October 2022
