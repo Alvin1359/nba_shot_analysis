@@ -180,5 +180,5 @@ Sends prediction result back to user
 - Size and colour of markings are scaled by the FG% of the player at that location
 - Chart is filterable by shot zone and player name
 
-Final Version Commit: 17 September 2021
+Final Version Commit: 17 September 2021  
 Last Revision: 03 October 2022
