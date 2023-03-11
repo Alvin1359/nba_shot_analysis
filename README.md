@@ -2,7 +2,7 @@
 
 Ever since 1891, basketball has continued to evolve, with new strategies being developed every era by the best teams. With the introduction of the three-point shot in 1979, one way the game has evolved is the increase in volume of three-point shots compared to the traditional two-pointer. But when did this occur? The transition towards a three-point era has been a rather recent development, with players like Stephen Curry and James Harden being pivotal influencers in this time. So how has the volume of two-point to three-point shots changed? Click below to find out more on how players and the league has changed from the 2008-09 season to the 2018-19 season.
 
-Final Deployment: https://nba-shot-analysis-al001.herokuapp.com/
+Active Final Deployment: https://nba-shot-analysis-al001.herokuapp.com/
 ![final app snippet](static/images/final_app_snippet.jpg)
 
 ## Assignment structure
